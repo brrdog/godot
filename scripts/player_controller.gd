@@ -6,6 +6,15 @@ extends CharacterBody2D
 @export var acceleration: float = 600.0
 @export var deceleration: float = 800.0
 @export var jump_velocity: float = -190.0
+@export_category("冲刺参数")  #冲刺参数
+@export var dash_speed: float = 320.0     
+@export var dash_duration: float = 0.18     
+@export var dash_cooldown: float = 0.4   #冲刺
+
+var is_dashing: bool = false
+var dash_time_left: float = 0.0
+var dash_cooldown_left: float = 0.0
+var dash_direction: Vector2 = Vector2.RIGHT
 var on_ladder: bool = false
 
 
@@ -15,7 +24,12 @@ var flying : bool = false
 var last_space_press_time := -1000
 
 func _physics_process(delta: float) -> void:
-	if on_ladder:
+	handle_dash(delta) #判断冲刺
+	if is_dashing:
+		update_sprite_direction()
+		move_and_slide()
+		return
+	if on_ladder:   #爬梯优先
 			handle_ladder_movement(delta)
 	elif !flying:
 		apply_gravity(delta)
@@ -88,7 +102,7 @@ func handle_space_pressed() -> void:
 	else:
 		last_space_press_time = current_time
 
-
+#下为梯子
 func _on_spikes_01_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	pass # Replace with function body.
 func handle_ladder_movement(delta: float) -> void:
@@ -96,4 +110,32 @@ func handle_ladder_movement(delta: float) -> void:
 	velocity.y = input_y * move_speed
 	var input_x := Input.get_axis("move_left", "move_right")
 	velocity.x = move_toward(velocity.x, input_x * move_speed, acceleration * delta)
+#冲刺函数	
+func handle_dash(delta: float) -> void:
+	if dash_cooldown_left > 0:
+		dash_cooldown_left -= delta
+	if Input.is_action_just_pressed("dash") \
+			and dash_cooldown_left <= 0 \
+			and not is_dashing:
+		start_dash()
+	if is_dashing:
+		velocity = dash_direction * dash_speed
+		dash_time_left -= delta
+		if dash_time_left <= 0:
+			end_dash()
+
+func start_dash() -> void:
+	is_dashing = true
+	dash_time_left = dash_duration
+	dash_cooldown_left = dash_cooldown
+	var input_x := Input.get_axis("move_left", "move_right")
+	if abs(input_x) > 0.1:
+		dash_direction = Vector2(sign(input_x), 0)
+	else:
+		dash_direction = Vector2(-1 if sprite.flip_h else 1, 0)
+
+func end_dash() -> void: 
+	is_dashing = false
+	velocity.x *= 0.3  	
+
 	
