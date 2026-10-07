@@ -1,0 +1,165 @@
+[gd_scene format=4 uid="uid://dikntd776fu2e"]
+
+[ext_resource type="TileSet" uid="uid://dkowcf1ljh41j" path="res://assets/game/tilesets/kenney_terrain_tileset.tres" id="1_4dvvg"]
+[ext_resource type="PackedScene" uid="uid://c1u8k6ny02t4y" path="res://scenes/player.tscn" id="2_rnjyy"]
+[ext_resource type="Texture2D" uid="uid://djmk0srfgyafe" path="res://assets/game/backgrounds/cloud_left.png" id="3_j7wrs"]
+[ext_resource type="Texture2D" uid="uid://dptqmtay4plwp" path="res://assets/game/backgrounds/cloud_trees.png" id="4_fws66"]
+[ext_resource type="Texture2D" uid="uid://dys7320ghojh6" path="res://assets/game/backgrounds/cloud_hills.png" id="5_hh0fu"]
+[ext_resource type="Texture2D" uid="uid://1b8hp0rm864l" path="res://assets/game/backgrounds/cloud_right.png" id="6_3m5ht"]
+
+[node name="Node2D" type="Node2D" unique_id=1083944656]
+
+[node name="TerrainTileMaps" type="Node2D" parent="." unique_id=45153113]
+
+[node name="TerrainBase" type="TileMapLayer" parent="TerrainTileMaps" unique_id=68519025]
+position = Vector2(9, 9)
+tile_map_data = PackedByteArray("AAAAAAkAAAACAAYAAAABAAkAAAADAAYAAAACAAkAAAANAAMAAAAAAAoAAAAEAAUAAAABAAoAAAACAAYAAAACAAoAAAADAAcAAGAXAAoAAAACAAYAAAAYAAoAAAACAAYAAAAZAAoAAAACAAYAAAAAAAsAAAAEAAUAAAABAAsAAAACAAYAAAACAAsAAAADAAYAAAAVAAsAAAANAAMAAAAWAAsAAAANAAMAAAAXAAsAAAAEAAUAAAAYAAsAAAAEAAUAAAAZAAsAAAACAAYAAAAAAAwAAAACAAYAAAABAAwAAAACAAYAAAACAAwAAAACAAYAAAADAAwAAAAEAAUAAAAEAAwAAAACAAYAAAAFAAwAAAAEAAUAAAAGAAwAAAANAAMAAAAHAAwAAAANAAMAAAAIAAwAAAANAAMAAAAJAAwAAAANAAMAAAAKAAwAAAANAAMAAAALAAwAAAANAAMAAAAPAAwAAAANAAMAAAARAAwAAAANAAMAAAASAAwAAAANAAMAAAATAAwAAAANAAMAAAAUAAwAAAANAAMAAAAVAAwAAAANAAMAAAAWAAwAAAACAAYAAAAXAAwAAAAEAAUAAAAYAAwAAAAEAAUAAAAZAAwAAAACAAYAAAAAAA0AAAAEAAUAAAABAA0AAAACAAYAAAACAA0AAAAEAAUAAAADAA0AAAACAAYAAAAEAA0AAAACAAYAAAAFAA0AAAAEAAUAAAAGAA0AAAACAAYAAAAHAA0AAAACAAYAAAAIAA0AAAAEAAUAAAAJAA0AAAACAAYAAAAKAA0AAAANAAMAAAALAA0AAAANAAMAAAAMAA0AAAANAAMAAAANAA0AAAANAAMAAAAOAA0AAAANAAMAAAAPAA0AAAANAAMAAAARAA0AAAANAAMAAAASAA0AAAANAAMAAAATAA0AAAANAAMAAAAUAA0AAAANAAMAAAAVAA0AAAANAAMAAAAWAA0AAAACAAYAAAAXAA0AAAAEAAUAAAAYAA0AAAACAAYAAAAZAA0AAAAEAAUAAAAAAA4AAAACAAYAAAABAA4AAAACAAYAAAACAA4AAAAEAAUAAAADAA4AAAACAAYAAAAEAA4AAAAEAAUAAAAFAA4AAAACAAYAAAAGAA4AAAAEAAUAAAAHAA4AAAAEAAUAAAAIAA4AAAAEAAUAAAAJAA4AAAAEAAUAAAAKAA4AAAAEAAUAAAALAA4AAAANAAMAAAAMAA4AAAANAAMAAAANAA4AAAANAAMAAAAOAA4AAAANAAMAAAAPAA4AAAANAAMAAAAQAA4AAAAEAAUAAAARAA4AAAACAAYAAAASAA4AAAACAAYAAAATAA4AAAACAAYAAAAUAA4AAAACAAYAAAAVAA4AAAACAAYAAAAWAA4AAAAEAAUAAAAXAA4AAAAEAAUAAAAYAA4AAAACAAYAAAAZAA4AAAAEAAUAAAD//wkAAAACAAYAAAD//woAAAAEAAAAAAD//wsAAAAEAAAAAAD//wwAAAAFAAAAAAD//w0AAAAEAAEAAAD//w4AAAAEAAEAAAD//wgAAAACAAUAAAABAAgAAAACAAUAAAACAAgAAAACAAUAAAD//wcAAAAGAAUAAAACAAcAAAAEAAcAAAAAAAcAAAAGAAUAAAAAAAgAAAACAAUAAAAEAAgAAAANAAEAAAADAAkAAAANAAMAAAADAAoAAAANAAMAAAADAAsAAAANAAMAAAAEAAsAAAANAAMAAAAEAAkAAAANAAMAAAAFAAkAAAANAAMAAAAFAAgAAAANAAEAAAAGAAkAAAAMAAYAAAAHAAoAAAANAAUAAAAIAAoAAAANAAYAAAAJAAoAAAANAAYAAAAKAAoAAAAOAAUAAAAKAAgAAAAPAAUAAAAKAAcAAAAPAAUAAAAKAAkAAAAPAAUAAAAKAAYAAAAPAAUAAAAKAAUAAAAPAAUAAAAKAAQAAAANAAQAAAALAAQAAAANAAYAAAAMAAQAAAANAAYAAAANAAQAAAANAAYAAAAOAAQAAAANAAYAAAAPAAQAAAANAAYAAAAIAAgAAAALAAcAAAAIAAcAAAALAAcAAAAJAAcAAAALAAcAAAAJAAYAAAALAAcAAAAJAAQAAAALAAcAAAAJAAgAAAALAAcAAAAJAAUAAAALAAcAAAAJAAMAAAALAAcAAAAKAAMAAAALAAcAAAALAAMAAAALAAcAAAAGAAgAAAANAAEAAAADAP//AAANAAMAAAAEAP//AAANAAMAAAAFAP//AAANAAMAAAAFAAAAAAANAAMAAAAFAAEAAAANAAMAAAAGAP//AAANAAMAAAAGAAAAAAANAAMAAAAGAAEAAAANAAMAAAAEAAAAAAANAAMAAAAHAAAAAAANAAMAAAAIAAAAAAANAAEAADAIAP//AAANAAMAAAAJAP//AAANAAMAAAAKAP//AAANAAMAAAALAP//AAANAAMAAAAMAP//AAANAAMAAAANAP//AAANAAMAAAAOAP//AAANAAMAAAAPAP//AAANAAMAAAAHAP//AAANAAMAAAAJAAAAAAANAAMAAAAKAAAAAAANAAMAAAALAAAAAAANAAMAAAAMAAAAAAANAAMAAAANAAAAAAANAAMAAAAOAAAAAAANAAMAAAAPAAAAAAANAAMAAAAMAAEAAAANAAMAAAANAAEAAAANAAMAAAAOAAEAAAANAAMAAAAQAP//AAANAAMAAAARAP//AAANAAMAAAAMAAIAAAANAAEAADANAAIAAAANAAEAADAOAAIAAAANAAEAADAPAAEAAAANAAEAADAQAAAAAAANAAEAADAJAAEAAAANAAEAADAKAAEAAAANAAEAADALAAEAAAANAAEAADAFAAsAAAANAAIAAAAGAAsAAAANAAIAAAAHAAsAAAANAAIAAAAIAAsAAAANAAIAAAAJAAsAAAANAAIAAAAKAAsAAAANAAIAAAALAAsAAAANAAIAAAAMAAwAAAANAAIAAAANAAwAAAANAAIAAAAOAAwAAAANAAMAAAAOAAsAAAANAAMAAAARAAsAAAANAAIAAAASAAsAAAANAAIAAAATAAsAAAANAAIAAAAUAAsAAAANAAIAAAAQAAQAAAANAAYAAAARAAQAAAANAAYAAAASAAQAAAAOAAQAAAASAAUAAAAPAAUAAAASAAYAAAANAAUAAAATAAYAAAANAAYAAAAUAAYAAAAOAAYAAAAVAAoAAAABAAUAAAAWAAoAAAACAAUAAAAMAA8AAAANAAMAAAANAA8AAAANAAMAAAAZAAkAAAAHAAQAAAAXAAkAAAACAAUAAAAPAAsAAAANAAMAAAAPAAoAAAANAAMAAAAOAAoAAAANAAMAAAAPAAkAAAANAAMAAAAOAAkAAAANAAMAAAAPAAgAAAANAAIAAAAPAAUAAAAIAAMAADAQAAUAAAAIAAMAADAOAAUAAAAIAAMAADABAAYAAAALAAAAAAAEAAoAAAANAAMAAAADAAgAAAANAAEAAAAHAAkAAAAOAAQAAAA=")
+tile_set = ExtResource("1_4dvvg")
+
+[node name="TerrainDetailsA" type="TileMapLayer" parent="TerrainTileMaps" unique_id=1864375971]
+z_index = 1
+position = Vector2(9, 9)
+tile_map_data = PackedByteArray("AAABAAwAAAABAAUAAAACAAwAAAACAAUAAAADAAwAAAADAAUAAAABAA4AAAABAAYAAAABAA8AAAABAAYAAAABABAAAAABAAYAAAABABEAAAABAAYAAAACAA0AAAACAAYAAAACAA4AAAACAAYAAAACAA8AAAACAAYAAAACABAAAAACAAYAAAACABEAAAACAAYAAAADAA0AAAADAAYAAAADAA4AAAADAAYAAAADAA8AAAADAAYAAAADABAAAAADAAYAAAADABEAAAADAAYAAAABAAsAAAAFAAcAAAABAA0AAAABAAYAAAABABIAAAABAAYAAAA=")
+tile_set = ExtResource("1_4dvvg")
+
+[node name="TerrainDetailsB" type="TileMapLayer" parent="TerrainTileMaps" unique_id=1394305469]
+z_index = 2
+position = Vector2(9, 9)
+tile_map_data = PackedByteArray("AAAGAAQAAAACAAgAAAAHAAQAAAACAAgAAAAIAAQAAAACAAgAAAA=")
+tile_set = ExtResource("1_4dvvg")
+
+[node name="ActorsAndCharacters" type="Node2D" parent="." unique_id=181062609]
+
+[node name="Player" parent="ActorsAndCharacters" unique_id=2098904787 instance=ExtResource("2_rnjyy")]
+z_index = 10
+position = Vector2(3, 128)
+rotation = -3.1415927
+scale = Vector2(1, -1)
+
+[node name="Background" type="Node2D" parent="." unique_id=1760554477]
+
+[node name="SkyColor" type="Polygon2D" parent="Background" unique_id=263089841]
+z_index = -30
+position = Vector2(-3, 7)
+color = Color(0.8509804, 0.9411765, 0.9372549, 1)
+polygon = PackedVector2Array(0, 0, 468, 0, 468, 130.0972, 468, 270, 0, 270)
+
+[node name="CloudBand_01" type="Sprite2D" parent="Background" unique_id=949656257]
+z_index = -20
+texture_filter = 1
+position = Vector2(12, 150)
+texture = ExtResource("3_j7wrs")
+
+[node name="CloudBand_02" type="Sprite2D" parent="Background" unique_id=1852630163]
+z_index = -20
+texture_filter = 1
+position = Vector2(36, 150)
+texture = ExtResource("4_fws66")
+
+[node name="CloudBand_03" type="Sprite2D" parent="Background" unique_id=239890035]
+z_index = -20
+texture_filter = 1
+position = Vector2(60, 150)
+texture = ExtResource("5_hh0fu")
+
+[node name="CloudBand_04" type="Sprite2D" parent="Background" unique_id=2124597435]
+z_index = -20
+texture_filter = 1
+position = Vector2(84, 150)
+texture = ExtResource("6_3m5ht")
+
+[node name="CloudBand_05" type="Sprite2D" parent="Background" unique_id=616875892]
+z_index = -20
+texture_filter = 1
+position = Vector2(108, 150)
+texture = ExtResource("3_j7wrs")
+
+[node name="CloudBand_06" type="Sprite2D" parent="Background" unique_id=440754936]
+z_index = -20
+texture_filter = 1
+position = Vector2(132, 150)
+texture = ExtResource("4_fws66")
+
+[node name="CloudBand_07" type="Sprite2D" parent="Background" unique_id=1158414518]
+z_index = -20
+texture_filter = 1
+position = Vector2(156, 150)
+texture = ExtResource("5_hh0fu")
+
+[node name="CloudBand_08" type="Sprite2D" parent="Background" unique_id=475590761]
+z_index = -20
+texture_filter = 1
+position = Vector2(180, 150)
+texture = ExtResource("6_3m5ht")
+
+[node name="CloudBand_09" type="Sprite2D" parent="Background" unique_id=1728794223]
+z_index = -20
+texture_filter = 1
+position = Vector2(204, 150)
+texture = ExtResource("3_j7wrs")
+
+[node name="CloudBand_10" type="Sprite2D" parent="Background" unique_id=1405980922]
+z_index = -20
+texture_filter = 1
+position = Vector2(228, 150)
+texture = ExtResource("4_fws66")
+
+[node name="CloudBand_11" type="Sprite2D" parent="Background" unique_id=614585482]
+z_index = -20
+texture_filter = 1
+position = Vector2(252, 150)
+texture = ExtResource("5_hh0fu")
+
+[node name="CloudBand_12" type="Sprite2D" parent="Background" unique_id=196657803]
+z_index = -20
+texture_filter = 1
+position = Vector2(276, 150)
+texture = ExtResource("6_3m5ht")
+
+[node name="CloudBand_13" type="Sprite2D" parent="Background" unique_id=1029735922]
+z_index = -20
+texture_filter = 1
+position = Vector2(300, 150)
+texture = ExtResource("3_j7wrs")
+
+[node name="CloudBand_14" type="Sprite2D" parent="Background" unique_id=2091846364]
+z_index = -20
+texture_filter = 1
+position = Vector2(324, 150)
+texture = ExtResource("4_fws66")
+
+[node name="CloudBand_15" type="Sprite2D" parent="Background" unique_id=649424420]
+z_index = -20
+texture_filter = 1
+position = Vector2(348, 150)
+texture = ExtResource("5_hh0fu")
+
+[node name="CloudBand_16" type="Sprite2D" parent="Background" unique_id=283431995]
+z_index = -20
+texture_filter = 1
+position = Vector2(372, 150)
+texture = ExtResource("6_3m5ht")
+
+[node name="CloudBand_17" type="Sprite2D" parent="Background" unique_id=1239325116]
+z_index = -20
+texture_filter = 1
+position = Vector2(396, 150)
+texture = ExtResource("3_j7wrs")
+
+[node name="CloudBand_18" type="Sprite2D" parent="Background" unique_id=965436997]
+z_index = -20
+texture_filter = 1
+position = Vector2(420, 150)
+texture = ExtResource("4_fws66")
+
+[node name="CloudBand_19" type="Sprite2D" parent="Background" unique_id=651141144]
+z_index = -20
+texture_filter = 1
+position = Vector2(444, 150)
+texture = ExtResource("5_hh0fu")
+
+[node name="CloudBand_20" type="Sprite2D" parent="Background" unique_id=30943389]
+z_index = -20
+texture_filter = 1
+position = Vector2(468, 150)
+texture = ExtResource("6_3m5ht")
