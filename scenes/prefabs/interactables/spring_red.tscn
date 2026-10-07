@@ -1,19 +1,28 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://dlyykvmk4y3ha"]
 
-[ext_resource type="Texture2D" path="res://assets/game/interactables/spring_red.png" id="1_texture"]
+[ext_resource type="Script" uid="uid://tahnpgm63fnd" path="res://scenes/prefabs/interactables/spring_red.gd" id="1_i3l3r"]
+[ext_resource type="Texture2D" uid="uid://b7wkoed3ty7em" path="res://assets/game/interactables/spring_red.png" id="1_texture"]
 
 [sub_resource type="RectangleShape2D" id="Shape_spring"]
 size = Vector2(14, 8)
 
-[node name="SpringRed" type="Area2D" groups=["spring"]]
-collision_layer = 8
-collision_mask = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26dq7"]
+size = Vector2(12, 14)
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="SpringRed" type="Area2D" unique_id=1795958375 groups=["spring"]]
+collision_mask = 2
+script = ExtResource("1_i3l3r")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1554752702]
 texture_filter = 1
 texture = ExtResource("1_texture")
 
-[node name="ActivationArea" type="CollisionShape2D" parent="."]
+[node name="ActivationArea" type="CollisionShape2D" parent="." unique_id=143511316]
 position = Vector2(0, 3)
 shape = SubResource("Shape_spring")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1488536197]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_26dq7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
