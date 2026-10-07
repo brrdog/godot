@@ -1,0 +1,184 @@
+[gd_scene format=4 uid="uid://dxlja31weitn5"]
+
+[ext_resource type="Texture2D" uid="uid://djmk0srfgyafe" path="res://assets/game/backgrounds/cloud_left.png" id="1_oqdr7"]
+[ext_resource type="Texture2D" uid="uid://dptqmtay4plwp" path="res://assets/game/backgrounds/cloud_trees.png" id="2_rnw0o"]
+[ext_resource type="Texture2D" uid="uid://dys7320ghojh6" path="res://assets/game/backgrounds/cloud_hills.png" id="3_tqy27"]
+[ext_resource type="Texture2D" uid="uid://1b8hp0rm864l" path="res://assets/game/backgrounds/cloud_right.png" id="4_pj4ev"]
+[ext_resource type="TileSet" uid="uid://dkowcf1ljh41j" path="res://assets/game/tilesets/kenney_terrain_tileset.tres" id="5_je7g8"]
+[ext_resource type="PackedScene" uid="uid://c1u8k6ny02t4y" path="res://scenes/player.tscn" id="6_rnw0o"]
+[ext_resource type="PackedScene" uid="uid://dlyykvmk4y3ha" path="res://scenes/prefabs/interactables/spring_red.tscn" id="7_tqy27"]
+[ext_resource type="Script" uid="uid://ccebu4x2pg41m" path="res://scenes/area_2d.gd" id="8_je7g8"]
+[ext_resource type="Texture2D" uid="uid://00l5fd5nj5ch" path="res://assets/kenney/tiles/tile_0111.png" id="9_uthfe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_26dq7"]
+size = Vector2(20, 18)
+
+[node name="main" type="Node2D" unique_id=27108301]
+
+[node name="Background" type="Node2D" parent="." unique_id=540912394]
+
+[node name="SkyColor" type="Polygon2D" parent="Background" unique_id=26163767]
+z_index = -30
+position = Vector2(-4, 1)
+color = Color(0.8509804, 0.9411765, 0.9372549, 1)
+polygon = PackedVector2Array(0, 0, 468, 0, 468, 130.0972, 468, 270, 0, 270)
+
+[node name="CloudBand_01" type="Sprite2D" parent="Background" unique_id=2145821081]
+z_index = -20
+texture_filter = 1
+position = Vector2(12, 150)
+texture = ExtResource("1_oqdr7")
+
+[node name="CloudBand_02" type="Sprite2D" parent="Background" unique_id=744633561]
+z_index = -20
+texture_filter = 1
+position = Vector2(36, 150)
+texture = ExtResource("2_rnw0o")
+
+[node name="CloudBand_03" type="Sprite2D" parent="Background" unique_id=1005338082]
+z_index = -20
+texture_filter = 1
+position = Vector2(60, 150)
+texture = ExtResource("3_tqy27")
+
+[node name="CloudBand_04" type="Sprite2D" parent="Background" unique_id=2105791598]
+z_index = -20
+texture_filter = 1
+position = Vector2(84, 150)
+texture = ExtResource("4_pj4ev")
+
+[node name="CloudBand_05" type="Sprite2D" parent="Background" unique_id=14501205]
+z_index = -20
+texture_filter = 1
+position = Vector2(108, 150)
+texture = ExtResource("1_oqdr7")
+
+[node name="CloudBand_06" type="Sprite2D" parent="Background" unique_id=1713250614]
+z_index = -20
+texture_filter = 1
+position = Vector2(132, 150)
+texture = ExtResource("2_rnw0o")
+
+[node name="CloudBand_07" type="Sprite2D" parent="Background" unique_id=288113727]
+z_index = -20
+texture_filter = 1
+position = Vector2(156, 150)
+texture = ExtResource("3_tqy27")
+
+[node name="CloudBand_08" type="Sprite2D" parent="Background" unique_id=380333013]
+z_index = -20
+texture_filter = 1
+position = Vector2(180, 150)
+texture = ExtResource("4_pj4ev")
+
+[node name="CloudBand_09" type="Sprite2D" parent="Background" unique_id=1077759155]
+z_index = -20
+texture_filter = 1
+position = Vector2(204, 150)
+texture = ExtResource("1_oqdr7")
+
+[node name="CloudBand_10" type="Sprite2D" parent="Background" unique_id=868720552]
+z_index = -20
+texture_filter = 1
+position = Vector2(228, 150)
+texture = ExtResource("2_rnw0o")
+
+[node name="CloudBand_11" type="Sprite2D" parent="Background" unique_id=1777367828]
+z_index = -20
+texture_filter = 1
+position = Vector2(252, 150)
+texture = ExtResource("3_tqy27")
+
+[node name="CloudBand_12" type="Sprite2D" parent="Background" unique_id=1792996899]
+z_index = -20
+texture_filter = 1
+position = Vector2(276, 150)
+texture = ExtResource("4_pj4ev")
+
+[node name="CloudBand_13" type="Sprite2D" parent="Background" unique_id=457596751]
+z_index = -20
+texture_filter = 1
+position = Vector2(300, 150)
+texture = ExtResource("1_oqdr7")
+
+[node name="CloudBand_14" type="Sprite2D" parent="Background" unique_id=1484066681]
+z_index = -20
+texture_filter = 1
+position = Vector2(324, 150)
+texture = ExtResource("2_rnw0o")
+
+[node name="CloudBand_15" type="Sprite2D" parent="Background" unique_id=940826953]
+z_index = -20
+texture_filter = 1
+position = Vector2(348, 150)
+texture = ExtResource("3_tqy27")
+
+[node name="CloudBand_16" type="Sprite2D" parent="Background" unique_id=474093445]
+z_index = -20
+texture_filter = 1
+position = Vector2(372, 150)
+texture = ExtResource("4_pj4ev")
+
+[node name="CloudBand_17" type="Sprite2D" parent="Background" unique_id=823736148]
+z_index = -20
+texture_filter = 1
+position = Vector2(396, 150)
+texture = ExtResource("1_oqdr7")
+
+[node name="CloudBand_18" type="Sprite2D" parent="Background" unique_id=1684317186]
+z_index = -20
+texture_filter = 1
+position = Vector2(420, 150)
+texture = ExtResource("2_rnw0o")
+
+[node name="CloudBand_19" type="Sprite2D" parent="Background" unique_id=385063088]
+z_index = -20
+texture_filter = 1
+position = Vector2(444, 150)
+texture = ExtResource("3_tqy27")
+
+[node name="CloudBand_20" type="Sprite2D" parent="Background" unique_id=1424175710]
+z_index = -20
+texture_filter = 1
+position = Vector2(468, 150)
+texture = ExtResource("4_pj4ev")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1226559726]
+tile_map_data = PackedByteArray("AAACAA4AAAAQAAYAAAACAA0AAAAQAAYAAAACAAwAAAAQAAQAAAACAAsAAAARAAQAAAABAAsAAAARAAIAAAAAAAoAAAARAAIAAAABAAoAAAASAAEAAAADAAoAAAASAAEAAAACAAoAAAASAAEAAAADAAkAAAASAAEAAAABAAkAAAASAAEAAAADAAsAAAATAAIAAAAEAAoAAAATAAIAAAAEAAkAAAATAAEAAAAAAAkAAAARAAEAAAAAAAgAAAARAAAAAAABAAcAAAARAAAAAAAEAAgAAAATAAAAAAADAAcAAAATAAAAAAACAAcAAAASAAAAAAABAAgAAAASAAEAAAACAAgAAAASAAEAAAADAAgAAAASAAEAAAAIAA4AAAARAAUAAAAIAA0AAAAQAAYAAAAIAAwAAAAQAAQAAAAIAAsAAAASAAYAAAAIAAoAAAAQAAQAAAAIAAkAAAARAAQAAAAJAAsAAAATAAUAAAAHAAgAAAARAAEAAAAHAAkAAAARAAIAAAAGAAcAAAARAAIAAAAHAAcAAAASAAEAAAAIAAcAAAASAAEAAAAIAAgAAAASAAEAAAACAAkAAAASAAEAAAAGAAYAAAARAAEAAAAGAAUAAAARAAEAAAAHAAYAAAASAAEAAAAIAAYAAAASAAEAAAAIAAUAAAASAAEAAAAJAAYAAAASAAEAAAAJAAcAAAASAAEAAAAJAAgAAAASAAEAAAAKAAgAAAATAAIAAAALAAcAAAATAAIAAAAKAAcAAAASAAEAAAAKAAYAAAASAAEAAAAHAAQAAAASAAEAAAAJAAQAAAASAAEAAAAKAAQAAAASAAAAAAALAAQAAAATAAAAAAAMAAUAAAATAAAAAAAMAAYAAAATAAEAAAAJAAkAAAATAAIAAAAHAAUAAAASAAEAAAAJAAUAAAASAAEAAAAKAAUAAAASAAEAAAALAAUAAAASAAEAAAALAAYAAAASAAEAAAAGAAQAAAARAAEAAAAGAAMAAAARAAAAAAAHAAMAAAASAAEAAAAHAAIAAAARAAAAAAAIAAMAAAASAAEAAAAJAAMAAAASAAEAAAAIAAQAAAASAAEAAAAKAAMAAAATAAAAAAAJAAIAAAATAAAAAAAIAAIAAAASAAAAAAALAAsAAAASAAMAAAAMAAsAAAASAAMAAAANAAsAAAATAAMAAAABAAMAAAANAAgAAAACAAMAAAANAAgAAAADAAMAAAANAAgAAAAKAAsAAAASAAMAAAARAA4AAAAMAAIAAAARAA0AAAAMAAIAAAARAAwAAAAMAAIAAAARAAsAAAAMAAIAAAARAAoAAAAMAAIAAAARAAkAAAAMAAIAAAARAAgAAAAMAAIAAAARAAcAAAAMAAIAAAARAAYAAAAMAAIAAAARAAUAAAAMAAAAAAAQAAUAAAANAAAAAAASAAUAAAAPAAAAAAAPAA4AAAAMAAIAAAAPAA0AAAAMAAAAAAAOAA0AAAAOAAAAAAAQAA0AAAAPAAAAAAAUAA4AAAAQAAUAAAAUAA0AAAAQAAUAAAAUAAsAAAAQAAUAAAAUAAwAAAARAAUAAAAUAAoAAAAQAAQAAAAUAAkAAAARAAUAAAAVAAkAAAATAAUAAAAWAAkAAAATAAQAAAATAAwAAAATAAUAAAASAAwAAAASAAQAAAAUAAgAAAARAAQAAAATAAgAAAARAAIAAAATAAcAAAARAAEAAAATAAYAAAARAAEAAAATAAUAAAARAAAAAAAWAAIAAAARAAAAAAAXAAQAAAATAAIAAAAWAAUAAAATAAIAAAAVAAYAAAASAAEAAAAVAAcAAAATAAEAAAAVAAgAAAATAAIAAAAUAAYAAAASAAEAAAAUAAcAAAASAAEAAAAVAAUAAAASAAEAAAAVAAQAAAASAAEAAAAUAAUAAAASAAEAAAAVAAMAAAARAAAAAAAWAAQAAAASAAEAAAAUAAQAAAARAAAAAAAXAAIAAAASAAAAAAAYAAIAAAATAAAAAAAYAAMAAAATAAIAAAAXAAMAAAASAAEAAAAWAAMAAAASAAEAAAAPAAUAAAAOAAAAAAA=")
+tile_set = ExtResource("5_je7g8")
+
+[node name="background" type="TileMapLayer" parent="TileMapLayer" unique_id=395310046]
+tile_map_data = PackedByteArray("AAAEAA4AAAARAAAAAAAJAA4AAAATAAEAAAAIAA0AAAASAAEAAAAGAA0AAAASAAEAAAAHAA0AAAASAAEAAAAGAA4AAAASAAEAAAAHAA4AAAASAAEAAAAIAA4AAAASAAEAAAACAAoAAAANAAcAAAADAAoAAAAOAAcAAAAEAAoAAAAPAAcAAAACAAIAAAAQAAcAAAADAAIAAAAQAAcAAAATAAEAAAAOAAcAAAASAAEAAAANAAcAAAAUAAEAAAAOAAcAAAAVAAEAAAAOAAcAAAAWAAEAAAAPAAcAAAAGAAwAAAARAAAAAAAHAAwAAAASAAAAAAAIAAwAAAATAAAAAAAJAA0AAAATAAAAAAAFAA0AAAARAAAAAAAFAA4AAAASAAEAAAARAAwAAAANAAcAAAASAAwAAAAOAAcAAAATAAwAAAAOAAcAAAAUAAwAAAAPAAcAAAAZAAwAAAAQAAUAAHAYAAwAAAARAAQAAGAYAA0AAAATAAIAAAAXAA0AAAASAAIAAAAWAA0AAAARAAIAAAAWAAwAAAARAAEAAAAWAAsAAAARAAAAAAAYAAsAAAATAAAAAAAXAAsAAAASAAAAAAAXAAwAAAASAAEAAAAZAAMAAAANAAcAAAAaAAMAAAAOAAcAAAAbAAMAAAAPAAcAAAA=")
+tile_set = ExtResource("5_je7g8")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayer" unique_id=1466374759]
+tile_map_data = PackedByteArray("AAAGAA4AAAAMAAIAAAAGAA0AAAAMAAIAAAAGAAwAAAAMAAIAAAAGAAsAAAAMAAIAAAAGAAoAAAAMAAAAAAAFAAoAAAAOAAAAAAAHAAoAAAAPAAAAAAA=")
+tile_set = ExtResource("5_je7g8")
+
+[node name="Player" parent="." unique_id=2098904787 instance=ExtResource("6_rnw0o")]
+z_index = 10
+position = Vector2(3, 128)
+rotation = -3.1415927
+scale = Vector2(1, -1)
+
+[node name="SpringRed_01" parent="." unique_id=1795958375 instance=ExtResource("7_tqy27")]
+z_index = 5
+position = Vector2(61, 120)
+
+[node name="SpringRed_02" parent="." unique_id=1718111321 instance=ExtResource("7_tqy27")]
+z_index = 5
+position = Vector2(225, 83)
+
+[node name="win" type="Area2D" parent="." unique_id=1009163098]
+collision_mask = 2
+script = ExtResource("8_je7g8")
+
+[node name="Sprite2D" type="Sprite2D" parent="win" unique_id=828514364]
+position = Vector2(429, 190)
+texture = ExtResource("9_uthfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=1344327004]
+position = Vector2(429, 191)
+shape = SubResource("RectangleShape2D_26dq7")
+
+[connection signal="body_entered" from="win" to="win" method="_on_body_entered"]

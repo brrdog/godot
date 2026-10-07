@@ -11,8 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_body_entered(body: Node2D) -> void:
-	# 判断碰到的是不是玩家
 	if body.name == "Player":
-		# 结束游戏
 		get_tree().reload_current_scene()
  

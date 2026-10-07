@@ -10,7 +10,8 @@ extends CharacterBody2D
 @export var dash_speed: float = 320.0     
 @export var dash_duration: float = 0.18     
 @export var dash_cooldown: float = 0.4   #冲刺
-
+@export var death_y: float = 300.0
+@export var death_x: float = 470.0
 var is_dashing: bool = false
 var dash_time_left: float = 0.0
 var dash_cooldown_left: float = 0.0
@@ -24,6 +25,12 @@ var flying : bool = false
 var last_space_press_time := -1000
 
 func _physics_process(delta: float) -> void:
+	if global_position.x > death_x:
+		die()
+		return
+	if global_position.y > death_y: #死
+		die()
+		return
 	handle_dash(delta) #判断冲刺
 	if is_dashing:
 		update_sprite_direction()
@@ -137,5 +144,7 @@ func start_dash() -> void:
 func end_dash() -> void: 
 	is_dashing = false
 	velocity.x *= 0.3  	
+func die() -> void:
+	get_tree().reload_current_scene()
 
 	

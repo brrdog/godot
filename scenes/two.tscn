@@ -1,18 +1,18 @@
-[gd_scene format=4 uid="uid://dikntd776fu2e"]
+[gd_scene format=4 uid="uid://cqvomry8w88xk"]
 
-[ext_resource type="TileSet" uid="uid://dkowcf1ljh41j" path="res://assets/game/tilesets/kenney_terrain_tileset.tres" id="1_4dvvg"]
-[ext_resource type="PackedScene" uid="uid://c1u8k6ny02t4y" path="res://scenes/player.tscn" id="2_rnjyy"]
-[ext_resource type="Texture2D" uid="uid://djmk0srfgyafe" path="res://assets/game/backgrounds/cloud_left.png" id="3_j7wrs"]
-[ext_resource type="Texture2D" uid="uid://dptqmtay4plwp" path="res://assets/game/backgrounds/cloud_trees.png" id="4_fws66"]
-[ext_resource type="Texture2D" uid="uid://dys7320ghojh6" path="res://assets/game/backgrounds/cloud_hills.png" id="5_hh0fu"]
-[ext_resource type="Texture2D" uid="uid://1b8hp0rm864l" path="res://assets/game/backgrounds/cloud_right.png" id="6_3m5ht"]
-[ext_resource type="PackedScene" uid="uid://dlyykvmk4y3ha" path="res://scenes/prefabs/interactables/spring_red.tscn" id="7_3m5ht"]
-[ext_resource type="PackedScene" uid="uid://bp62d2e6ukmrs" path="res://scenes/prefabs/hazards/spikes_double.tscn" id="8_3m5ht"]
-[ext_resource type="Script" uid="uid://3ugbvq1iadqi" path="res://scenes/prefabs/hazards/spikes_double.gd" id="9_dubn7"]
-[ext_resource type="Script" uid="uid://b0s3djqquycdh" path="res://scenes/ladder.gd" id="10_08kqv"]
-[ext_resource type="Texture2D" uid="uid://bxjuc1ha3hitm" path="res://assets/kenney/tiles/tile_0051.png" id="11_f6ptj"]
-[ext_resource type="Script" uid="uid://dfxo38xx4bla4" path="res://scenes/goal.gd" id="12_hsdmi"]
-[ext_resource type="Texture2D" uid="uid://00l5fd5nj5ch" path="res://assets/kenney/tiles/tile_0111.png" id="13_ifa78"]
+[ext_resource type="TileSet" uid="uid://dkowcf1ljh41j" path="res://assets/game/tilesets/kenney_terrain_tileset.tres" id="1_x44qf"]
+[ext_resource type="PackedScene" uid="uid://c1u8k6ny02t4y" path="res://scenes/player.tscn" id="2_7th1v"]
+[ext_resource type="Texture2D" uid="uid://djmk0srfgyafe" path="res://assets/game/backgrounds/cloud_left.png" id="3_bnt08"]
+[ext_resource type="Texture2D" uid="uid://dptqmtay4plwp" path="res://assets/game/backgrounds/cloud_trees.png" id="4_g5c1g"]
+[ext_resource type="Texture2D" uid="uid://dys7320ghojh6" path="res://assets/game/backgrounds/cloud_hills.png" id="5_b22kf"]
+[ext_resource type="Texture2D" uid="uid://1b8hp0rm864l" path="res://assets/game/backgrounds/cloud_right.png" id="6_qm43i"]
+[ext_resource type="PackedScene" uid="uid://dlyykvmk4y3ha" path="res://scenes/prefabs/interactables/spring_red.tscn" id="7_g3rb4"]
+[ext_resource type="PackedScene" uid="uid://bp62d2e6ukmrs" path="res://scenes/prefabs/hazards/spikes_double.tscn" id="8_204dv"]
+[ext_resource type="Script" uid="uid://3ugbvq1iadqi" path="res://scenes/prefabs/hazards/spikes_double.gd" id="9_qrlxc"]
+[ext_resource type="Script" uid="uid://b0s3djqquycdh" path="res://scenes/ladder.gd" id="10_ihocw"]
+[ext_resource type="Texture2D" uid="uid://bxjuc1ha3hitm" path="res://assets/kenney/tiles/tile_0051.png" id="11_1osfu"]
+[ext_resource type="Script" uid="uid://b60di7ccee5pf" path="res://scenes/goal_2.gd" id="12_x44qf"]
+[ext_resource type="Texture2D" uid="uid://00l5fd5nj5ch" path="res://assets/kenney/tiles/tile_0111.png" id="13_jei0l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08kqv"]
 size = Vector2(18, 8)
@@ -30,23 +30,23 @@ size = Vector2(14, 29)
 [node name="TerrainBase" type="TileMapLayer" parent="TerrainTileMaps" unique_id=68519025]
 position = Vector2(9, 9)
 tile_map_data = PackedByteArray("AAAAAAkAAAAEAAEAAAABAAkAAAACAAYAAAACAAkAAAACAAYAAAAAAAoAAAAEAAUAAAABAAoAAAACAAYAAAACAAoAAAACAAYAAAAXAAoAAAACAAYAAAAYAAoAAAACAAYAAAAZAAoAAAACAAYAAAAAAAsAAAAEAAUAAAABAAsAAAACAAYAAAACAAsAAAACAAYAAAAVAAsAAAAEAAEAAAAWAAsAAAAEAAEAAAAXAAsAAAAEAAUAAAAYAAsAAAAEAAUAAAAZAAsAAAACAAYAAAAAAAwAAAAFAAAAAAABAAwAAAACAAYAAAACAAwAAAACAAYAAAADAAwAAAAFAAAAAAAEAAwAAAACAAYAAAAFAAwAAAAEAAUAAAAGAAwAAAACAAYAAAAHAAwAAAAEAAEAAAAIAAwAAAACAAYAAAAJAAwAAAAEAAUAAAAKAAwAAAACAAYAAAALAAwAAAACAAYAAAAPAAwAAAAEAAUAAAARAAwAAAAFAAEAAAASAAwAAAAFAAEAAAATAAwAAAAFAAEAAAAUAAwAAAAFAAEAAAAVAAwAAAAEAAEAAAAWAAwAAAAEAAEAAAAXAAwAAAAEAAUAAAAYAAwAAAAEAAUAAAAZAAwAAAACAAYAAAAAAA0AAAAEAAUAAAABAA0AAAACAAYAAAACAA0AAAAEAAUAAAADAA0AAAACAAYAAAAEAA0AAAACAAYAAAAFAA0AAAAEAAUAAAAGAA0AAAACAAYAAAAHAA0AAAAFAAAAAAAIAA0AAAAFAAAAAAAJAA0AAAAEAAEAAAAKAA0AAAACAAYAAAALAA0AAAAEAAEAAAAMAA0AAAAEAAEAAAANAA0AAAAEAAEAAAAOAA0AAAAEAAUAAAAPAA0AAAAEAAUAAAARAA0AAAAFAAEAAAASAA0AAAAEAAUAAAATAA0AAAAEAAUAAAAUAA0AAAAEAAUAAAAVAA0AAAAEAAUAAAAWAA0AAAAEAAEAAAAXAA0AAAAEAAAAAAAYAA0AAAACAAYAAAAZAA0AAAAEAAUAAAAAAA4AAAACAAYAAAABAA4AAAACAAYAAAACAA4AAAAEAAUAAAADAA4AAAACAAYAAAAEAA4AAAAEAAUAAAAFAA4AAAACAAYAAAAGAA4AAAAEAAUAAAAHAA4AAAAEAAEAAAAIAA4AAAACAAYAAAAJAA4AAAAEAAEAAAAKAA4AAAACAAYAAAALAA4AAAACAAYAAAAMAA4AAAACAAYAAAANAA4AAAACAAYAAAAOAA4AAAACAAYAAAAPAA4AAAAEAAEAAAAQAA4AAAAEAAEAAAARAA4AAAAFAAEAAAASAA4AAAAEAAAAAAATAA4AAAACAAYAAAAUAA4AAAAEAAAAAAAVAA4AAAAEAAEAAAAWAA4AAAAEAAUAAAAXAA4AAAAEAAUAAAAYAA4AAAACAAYAAAAZAA4AAAAEAAUAAAD//wkAAAACAAYAAAD//woAAAAEAAAAAAD//wsAAAAEAAAAAAD//wwAAAAFAAAAAAD//w0AAAAEAAEAAAD//w4AAAAEAAEAAAD//wgAAAACAAUAAAABAAgAAAACAAUAAAACAAgAAAACAAUAAAD//wcAAAAGAAUAAAACAAcAAAAEAAcAAAAAAAcAAAAGAAUAAAAAAAgAAAACAAUAAAAEAAgAAAACAAUAAAADAAkAAAACAAYAAAADAAoAAAAFAAAAAAADAAsAAAAFAAAAAAAEAAsAAAACAAYAAAAEAAkAAAAEAAEAAAAFAAkAAAADAAYAAAAFAAgAAAACAAUAAAAGAAkAAAAMAAYAAAAHAAoAAAANAAUAAAAIAAoAAAANAAYAAAAJAAoAAAANAAYAAAAKAAoAAAAOAAUAAAAKAAgAAAAPAAUAAAAKAAcAAAAPAAUAAAAKAAkAAAAPAAUAAAAKAAYAAAAPAAUAAAAKAAUAAAAPAAUAAAAKAAQAAAANAAQAAAALAAQAAAANAAYAAAAMAAQAAAANAAYAAAANAAQAAAANAAYAAAAOAAQAAAANAAYAAAAPAAQAAAANAAYAAAAIAAgAAAALAAcAAAAIAAcAAAALAAcAAAAJAAcAAAALAAcAAAAJAAYAAAALAAcAAAAJAAQAAAALAAcAAAAJAAgAAAALAAcAAAAJAAUAAAALAAcAAAAJAAMAAAALAAcAAAAKAAMAAAALAAcAAAALAAMAAAALAAcAAAADAP//AAANAAMAAAAEAP//AAANAAMAAAAFAP//AAANAAMAAAAFAAAAAAANAAMAAAAFAAEAAAANAAMAAAAGAP//AAANAAMAAAAGAAAAAAANAAMAAAAGAAEAAAANAAMAAAAEAAAAAAANAAMAAAAHAAAAAAANAAMAAAAIAAAAAAANAAEAADAIAP//AAANAAMAAAAJAP//AAANAAMAAAAKAP//AAANAAMAAAALAP//AAANAAMAAAAMAP//AAANAAMAAAANAP//AAANAAMAAAAOAP//AAANAAMAAAAPAP//AAANAAMAAAAHAP//AAANAAMAAAAJAAAAAAANAAMAAAAKAAAAAAANAAMAAAALAAAAAAANAAMAAAAMAAAAAAANAAMAAAANAAAAAAANAAMAAAAOAAAAAAANAAMAAAAPAAAAAAANAAMAAAAMAAEAAAANAAMAAAANAAEAAAANAAMAAAAOAAEAAAANAAMAAAAQAP//AAANAAMAAAARAP//AAANAAMAAAAMAAIAAAANAAEAADANAAIAAAANAAEAADAOAAIAAAANAAEAADAPAAEAAAANAAEAADAQAAAAAAANAAEAADAJAAEAAAANAAEAADAKAAEAAAANAAEAADALAAEAAAANAAEAADAFAAsAAAACAAYAAAAGAAsAAAADAAYAAGAHAAsAAAADAAYAAGAIAAsAAAADAAYAAGAJAAsAAAAEAAEAAAAKAAsAAAADAAYAAGALAAsAAAADAAcAAGAMAAwAAAADAAYAAGANAAwAAAAFAAEAAAAOAAwAAAACAAYAAAAOAAsAAAACAAYAAAARAAsAAAACAAUAAAASAAsAAAACAAUAAAATAAsAAAACAAUAAAAUAAsAAAADAAUAAAAQAAQAAAANAAYAAAARAAQAAAANAAYAAAASAAQAAAAOAAQAAAASAAUAAAAPAAUAAAASAAYAAAANAAUAAAATAAYAAAANAAYAAAAUAAYAAAAOAAYAAAAVAAoAAAABAAUAAAAWAAoAAAACAAUAAAAMAA8AAAANAAMAAAANAA8AAAANAAMAAAAZAAkAAAAHAAQAAAAXAAkAAAACAAUAAAAPAAsAAAACAAYAAAAPAAoAAAAEAAUAAAAOAAoAAAACAAYAAAAPAAkAAAACAAYAAAAOAAkAAAACAAYAAAAPAAgAAAACAAYAAAABAAYAAAALAAAAAAAEAAoAAAAEAAEAAAADAAgAAAACAAUAAAAHAAkAAAAOAAQAAAAFAAoAAAADAAYAAAALAA8AAAAEAAEAAAAKAA8AAAAEAAEAAAAQAAsAAAACAAUAAAAQAA0AAAAEAAAAAAAQAAwAAAAFAAEAAAANAAsAAAALAAYAAAA=")
-tile_set = ExtResource("1_4dvvg")
+tile_set = ExtResource("1_x44qf")
 
 [node name="TerrainDetailsA" type="TileMapLayer" parent="TerrainTileMaps" unique_id=1864375971]
 z_index = 1
 position = Vector2(9, 9)
 tile_map_data = PackedByteArray("AAABAAwAAAABAAUAAAACAAwAAAACAAUAAAADAAwAAAADAAUAAAABAA4AAAABAAYAAAABAA8AAAABAAYAAAABABAAAAABAAYAAAABABEAAAABAAYAAAACAA0AAAACAAYAAAACAA4AAAACAAYAAAACAA8AAAACAAYAAAACABAAAAACAAYAAAACABEAAAACAAYAAAADAA0AAAADAAYAAAADAA4AAAADAAYAAAADAA8AAAADAAYAAAADABAAAAADAAYAAAADABEAAAADAAYAAAABAAsAAAAFAAcAAAABAA0AAAABAAYAAAABABIAAAABAAYAAAA=")
-tile_set = ExtResource("1_4dvvg")
+tile_set = ExtResource("1_x44qf")
 
 [node name="TerrainDetailsB" type="TileMapLayer" parent="TerrainTileMaps" unique_id=1394305469]
 z_index = 2
 position = Vector2(9, 9)
 tile_map_data = PackedByteArray("AAAGAAQAAAACAAgAAAAHAAQAAAACAAgAAAAIAAQAAAACAAgAAAA=")
-tile_set = ExtResource("1_4dvvg")
+tile_set = ExtResource("1_x44qf")
 
 [node name="ActorsAndCharacters" type="Node2D" parent="." unique_id=181062609]
 
-[node name="Player" parent="ActorsAndCharacters" unique_id=2098904787 instance=ExtResource("2_rnjyy")]
+[node name="Player" parent="ActorsAndCharacters" unique_id=2098904787 instance=ExtResource("2_7th1v")]
 z_index = 10
 position = Vector2(3, 128)
 rotation = -3.1415927
@@ -64,208 +64,208 @@ polygon = PackedVector2Array(0, 0, 468, 0, 468, 130.0972, 468, 270, 0, 270)
 z_index = -20
 texture_filter = 1
 position = Vector2(12, 150)
-texture = ExtResource("3_j7wrs")
+texture = ExtResource("3_bnt08")
 
 [node name="CloudBand_02" type="Sprite2D" parent="Background" unique_id=1852630163]
 z_index = -20
 texture_filter = 1
 position = Vector2(36, 150)
-texture = ExtResource("4_fws66")
+texture = ExtResource("4_g5c1g")
 
 [node name="CloudBand_03" type="Sprite2D" parent="Background" unique_id=239890035]
 z_index = -20
 texture_filter = 1
 position = Vector2(60, 150)
-texture = ExtResource("5_hh0fu")
+texture = ExtResource("5_b22kf")
 
 [node name="CloudBand_04" type="Sprite2D" parent="Background" unique_id=2124597435]
 z_index = -20
 texture_filter = 1
 position = Vector2(84, 150)
-texture = ExtResource("6_3m5ht")
+texture = ExtResource("6_qm43i")
 
 [node name="CloudBand_05" type="Sprite2D" parent="Background" unique_id=616875892]
 z_index = -20
 texture_filter = 1
 position = Vector2(108, 150)
-texture = ExtResource("3_j7wrs")
+texture = ExtResource("3_bnt08")
 
 [node name="CloudBand_06" type="Sprite2D" parent="Background" unique_id=440754936]
 z_index = -20
 texture_filter = 1
 position = Vector2(132, 150)
-texture = ExtResource("4_fws66")
+texture = ExtResource("4_g5c1g")
 
 [node name="CloudBand_07" type="Sprite2D" parent="Background" unique_id=1158414518]
 z_index = -20
 texture_filter = 1
 position = Vector2(156, 150)
-texture = ExtResource("5_hh0fu")
+texture = ExtResource("5_b22kf")
 
 [node name="CloudBand_08" type="Sprite2D" parent="Background" unique_id=475590761]
 z_index = -20
 texture_filter = 1
 position = Vector2(180, 150)
-texture = ExtResource("6_3m5ht")
+texture = ExtResource("6_qm43i")
 
 [node name="CloudBand_09" type="Sprite2D" parent="Background" unique_id=1728794223]
 z_index = -20
 texture_filter = 1
 position = Vector2(204, 150)
-texture = ExtResource("3_j7wrs")
+texture = ExtResource("3_bnt08")
 
 [node name="CloudBand_10" type="Sprite2D" parent="Background" unique_id=1405980922]
 z_index = -20
 texture_filter = 1
 position = Vector2(228, 150)
-texture = ExtResource("4_fws66")
+texture = ExtResource("4_g5c1g")
 
 [node name="CloudBand_11" type="Sprite2D" parent="Background" unique_id=614585482]
 z_index = -20
 texture_filter = 1
 position = Vector2(252, 150)
-texture = ExtResource("5_hh0fu")
+texture = ExtResource("5_b22kf")
 
 [node name="CloudBand_12" type="Sprite2D" parent="Background" unique_id=196657803]
 z_index = -20
 texture_filter = 1
 position = Vector2(276, 150)
-texture = ExtResource("6_3m5ht")
+texture = ExtResource("6_qm43i")
 
 [node name="CloudBand_13" type="Sprite2D" parent="Background" unique_id=1029735922]
 z_index = -20
 texture_filter = 1
 position = Vector2(300, 150)
-texture = ExtResource("3_j7wrs")
+texture = ExtResource("3_bnt08")
 
 [node name="CloudBand_14" type="Sprite2D" parent="Background" unique_id=2091846364]
 z_index = -20
 texture_filter = 1
 position = Vector2(324, 150)
-texture = ExtResource("4_fws66")
+texture = ExtResource("4_g5c1g")
 
 [node name="CloudBand_15" type="Sprite2D" parent="Background" unique_id=649424420]
 z_index = -20
 texture_filter = 1
 position = Vector2(348, 150)
-texture = ExtResource("5_hh0fu")
+texture = ExtResource("5_b22kf")
 
 [node name="CloudBand_16" type="Sprite2D" parent="Background" unique_id=283431995]
 z_index = -20
 texture_filter = 1
 position = Vector2(372, 150)
-texture = ExtResource("6_3m5ht")
+texture = ExtResource("6_qm43i")
 
 [node name="CloudBand_17" type="Sprite2D" parent="Background" unique_id=1239325116]
 z_index = -20
 texture_filter = 1
 position = Vector2(396, 150)
-texture = ExtResource("3_j7wrs")
+texture = ExtResource("3_bnt08")
 
 [node name="CloudBand_18" type="Sprite2D" parent="Background" unique_id=965436997]
 z_index = -20
 texture_filter = 1
 position = Vector2(420, 150)
-texture = ExtResource("4_fws66")
+texture = ExtResource("4_g5c1g")
 
 [node name="CloudBand_19" type="Sprite2D" parent="Background" unique_id=651141144]
 z_index = -20
 texture_filter = 1
 position = Vector2(444, 150)
-texture = ExtResource("5_hh0fu")
+texture = ExtResource("5_b22kf")
 
 [node name="CloudBand_20" type="Sprite2D" parent="Background" unique_id=30943389]
 z_index = -20
 texture_filter = 1
 position = Vector2(468, 150)
-texture = ExtResource("6_3m5ht")
+texture = ExtResource("6_qm43i")
 
-[node name="SpringRed_01" parent="." unique_id=1795958375 instance=ExtResource("7_3m5ht")]
+[node name="SpringRed_01" parent="." unique_id=1795958375 instance=ExtResource("7_g3rb4")]
 z_index = 5
 position = Vector2(180, 179)
 
-[node name="SpringRed_01" parent="SpringRed_01" unique_id=1784004949 instance=ExtResource("7_3m5ht")]
+[node name="SpringRed_01" parent="SpringRed_01" unique_id=1784004949 instance=ExtResource("7_g3rb4")]
 z_index = 5
 position = Vector2(126, 20)
 
 [node name="hazards" type="Node2D" parent="." unique_id=1278566843]
 
-[node name="Spikes_01" parent="hazards" unique_id=691928294 instance=ExtResource("8_3m5ht")]
+[node name="Spikes_01" parent="hazards" unique_id=691928294 instance=ExtResource("8_204dv")]
 z_index = 5
 position = Vector2(341, 199)
-script = ExtResource("9_dubn7")
+script = ExtResource("9_qrlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazards/Spikes_01" unique_id=2076828118]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_08kqv")
 
-[node name="Spikes_02" parent="hazards" unique_id=1772700121 instance=ExtResource("8_3m5ht")]
+[node name="Spikes_02" parent="hazards" unique_id=1772700121 instance=ExtResource("8_204dv")]
 z_index = 5
 position = Vector2(377, 199)
-script = ExtResource("9_dubn7")
+script = ExtResource("9_qrlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazards/Spikes_02" unique_id=852969659]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_08kqv")
 
-[node name="Spikes_03" parent="hazards" unique_id=886941473 instance=ExtResource("8_3m5ht")]
+[node name="Spikes_03" parent="hazards" unique_id=886941473 instance=ExtResource("8_204dv")]
 z_index = 5
 position = Vector2(359, 199)
-script = ExtResource("9_dubn7")
+script = ExtResource("9_qrlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazards/Spikes_03" unique_id=1149104523]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_08kqv")
 
-[node name="Spikes_05" parent="hazards" unique_id=1231400958 instance=ExtResource("8_3m5ht")]
+[node name="Spikes_05" parent="hazards" unique_id=1231400958 instance=ExtResource("8_204dv")]
 z_index = 5
 position = Vector2(288, 148)
-script = ExtResource("9_dubn7")
+script = ExtResource("9_qrlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazards/Spikes_05" unique_id=122139590]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_08kqv")
 
-[node name="Spikes_06" parent="hazards" unique_id=396391009 instance=ExtResource("8_3m5ht")]
+[node name="Spikes_06" parent="hazards" unique_id=396391009 instance=ExtResource("8_204dv")]
 z_index = 5
 position = Vector2(270, 165)
-script = ExtResource("9_dubn7")
+script = ExtResource("9_qrlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazards/Spikes_06" unique_id=2017516537]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_08kqv")
 
-[node name="Spikes_04" parent="hazards" unique_id=559210321 instance=ExtResource("8_3m5ht")]
+[node name="Spikes_04" parent="hazards" unique_id=559210321 instance=ExtResource("8_204dv")]
 z_index = 5
 position = Vector2(331, 199)
-script = ExtResource("9_dubn7")
+script = ExtResource("9_qrlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazards/Spikes_04" unique_id=2009670219]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_08kqv")
 
-[node name="Spikes_07" parent="hazards" unique_id=1678784982 instance=ExtResource("8_3m5ht")]
+[node name="Spikes_07" parent="hazards" unique_id=1678784982 instance=ExtResource("8_204dv")]
 z_index = 5
 position = Vector2(74, 144)
-script = ExtResource("9_dubn7")
+script = ExtResource("9_qrlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazards/Spikes_07" unique_id=346976161]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_08kqv")
 
-[node name="Spikes_08" parent="hazards" unique_id=436716323 instance=ExtResource("8_3m5ht")]
+[node name="Spikes_08" parent="hazards" unique_id=436716323 instance=ExtResource("8_204dv")]
 z_index = 5
 position = Vector2(91, 144)
-script = ExtResource("9_dubn7")
+script = ExtResource("9_qrlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazards/Spikes_08" unique_id=86751272]
 position = Vector2(1, 5)
 shape = SubResource("RectangleShape2D_08kqv")
 
-[node name="Spikes_09" parent="hazards" unique_id=954316475 instance=ExtResource("8_3m5ht")]
+[node name="Spikes_09" parent="hazards" unique_id=954316475 instance=ExtResource("8_204dv")]
 z_index = 5
 position = Vector2(107, 144)
-script = ExtResource("9_dubn7")
+script = ExtResource("9_qrlxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hazards/Spikes_09" unique_id=176843314]
 position = Vector2(1, 5)
@@ -280,27 +280,27 @@ text = "怎么跳不过去，按e试试"
 
 [node name="ladder" type="Area2D" parent="." unique_id=105371878]
 collision_mask = 2
-script = ExtResource("10_08kqv")
+script = ExtResource("10_ihocw")
 
 [node name="Sprite2D" type="Sprite2D" parent="ladder" unique_id=1956346389]
 position = Vector2(182, 86)
 scale = Vector2(1, 1.4444444)
-texture = ExtResource("11_f6ptj")
+texture = ExtResource("11_1osfu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ladder" unique_id=1591389893]
 position = Vector2(181, 88.75)
 shape = SubResource("RectangleShape2D_hsdmi")
 
-[node name="goal" type="Area2D" parent="." unique_id=70428150]
+[node name="goal2" type="Area2D" parent="." unique_id=70428150]
 position = Vector2(-162, 85)
 collision_mask = 2
-script = ExtResource("12_hsdmi")
+script = ExtResource("12_x44qf")
 
-[node name="Sprite2D" type="Sprite2D" parent="goal" unique_id=700248205]
+[node name="Sprite2D" type="Sprite2D" parent="goal2" unique_id=700248205]
 position = Vector2(414, 114)
-texture = ExtResource("13_ifa78")
+texture = ExtResource("13_jei0l")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="goal" unique_id=1323387995]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goal2" unique_id=1323387995]
 position = Vector2(415, 118.5)
 shape = SubResource("RectangleShape2D_xtx0q")
 
@@ -315,4 +315,4 @@ shape = SubResource("RectangleShape2D_xtx0q")
 [connection signal="body_entered" from="hazards/Spikes_09" to="hazards/Spikes_09" method="_on_body_entered"]
 [connection signal="body_entered" from="ladder" to="ladder" method="_on_body_entered"]
 [connection signal="body_exited" from="ladder" to="ladder" method="_on_body_exited"]
-[connection signal="body_entered" from="goal" to="goal" method="_on_body_entered"]
+[connection signal="body_entered" from="goal2" to="goal2" method="_on_body_entered"]
