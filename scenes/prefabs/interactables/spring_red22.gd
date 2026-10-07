@@ -1,6 +1,7 @@
 extends Area2D
-var triggered: bool = false
-@export_file("*.tscn") var four1: String="res://scenes/four1.tscn"
+@export var bounce_velocity: float = -250.0
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -12,11 +13,6 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if triggered:
-		return
 	if body.name == "Player":
-		triggered = true
-		win()
-func win() -> void:
-	get_tree().change_scene_to_file(four1)
-	
+		if body.velocity.y > 0:
+			body.velocity.y = bounce_velocity

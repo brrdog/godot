@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ca3lh0bptfjga"]
+
+[ext_resource type="Texture2D" uid="uid://cib5x5ca8p8ti" path="res://scenes/维什戴尔-绝对主角-正面-Idle-f37.png" id="1_jaeev"]
+[ext_resource type="Script" uid="uid://bugccxvmkjbv6" path="res://scenes/button.gd" id="2_kdmts"]
+[ext_resource type="Script" uid="uid://docpopdc4rr0x" path="res://scenes/button_2.gd" id="3_bodal"]
+
+[node name="Node2D" type="Control" unique_id=110747012]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=843512659]
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 263.0
+color = Color(0.9967386, 0.5719355, 0.7006598, 1)
+
+[node name="Label" type="Label" parent="." unique_id=309417421]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 20.0
+offset_right = 436.0
+offset_bottom = 43.0
+text = "维维美小冒险"
+
+[node name="Button" type="Button" parent="." unique_id=1238797248]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 85.0
+offset_right = 218.0
+offset_bottom = 125.0
+text = "let's goooooooo"
+script = ExtResource("2_kdmts")
+
+[node name="维什戴尔绝对主角正面IdleF37" type="Sprite2D" parent="." unique_id=671313405]
+position = Vector2(382, 1)
+texture = ExtResource("1_jaeev")
+
+[node name="Button2" type="Button" parent="." unique_id=913935254]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 153.0
+offset_right = 218.0
+offset_bottom = 193.0
+text = "润"
+script = ExtResource("3_bodal")
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_down" from="Button2" to="Button2" method="_on_button_down"]

@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="平台闯关 刺碰撞箱 (Copy) (Copy)"
-run/main_scene="res://scenes/main.tscn"
+config/name="new"
+run/main_scene="uid://ca3lh0bptfjga"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

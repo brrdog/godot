@@ -1,0 +1,350 @@
+[gd_scene format=4 uid="uid://wwh7blmnogjv"]
+
+[ext_resource type="PackedScene" uid="uid://c1u8k6ny02t4y" path="res://scenes/player.tscn" id="1_hhinq"]
+[ext_resource type="Script" uid="uid://cl8j8cbt36m2o" path="res://scenes/playerlowg.gd" id="2_fgtvi"]
+[ext_resource type="TileSet" uid="uid://dkowcf1ljh41j" path="res://assets/game/tilesets/kenney_terrain_tileset.tres" id="3_fgtvi"]
+[ext_resource type="Texture2D" uid="uid://djmk0srfgyafe" path="res://assets/game/backgrounds/cloud_left.png" id="4_wg10w"]
+[ext_resource type="Texture2D" uid="uid://dptqmtay4plwp" path="res://assets/game/backgrounds/cloud_trees.png" id="5_e0tbd"]
+[ext_resource type="Texture2D" uid="uid://dys7320ghojh6" path="res://assets/game/backgrounds/cloud_hills.png" id="6_s4v41"]
+[ext_resource type="Texture2D" uid="uid://1b8hp0rm864l" path="res://assets/game/backgrounds/cloud_right.png" id="7_dt7qr"]
+[ext_resource type="PackedScene" uid="uid://bp62d2e6ukmrs" path="res://scenes/prefabs/hazards/spikes_double.tscn" id="8_s4v41"]
+[ext_resource type="Script" uid="uid://3ugbvq1iadqi" path="res://scenes/prefabs/hazards/spikes_double.gd" id="9_dt7qr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44xxe"]
+size = Vector2(18, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i456w"]
+size = Vector2(14, 9)
+
+[node name="Node2D" type="Node2D" unique_id=1316285767]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1866985645]
+tile_map_data = PackedByteArray("AAACAAwAAAADAAYAAAACAAUAAAADAAYAAAACAAYAAAADAAYAAAAMAAsAAAABAAYAAAAMAAoAAAABAAYAAAACAAAAAAADAAYAAAACAAEAAAADAAYAAAACAAIAAAADAAYAAAACAAMAAAADAAYAAAACAAQAAAADAAYAAAACAAcAAAADAAYAAAACAAgAAAADAAYAAAACAAkAAAADAAYAAAACAAoAAAADAAYAAAACAAsAAAADAAYAAAACAA0AAAADAAYAAAACAA4AAAADAAYAAAAMAAAAAAABAAYAAAAMAAEAAAABAAYAAAAMAAIAAAABAAYAAAAMAAMAAAABAAYAAAAMAAQAAAABAAYAAAAMAAUAAAABAAYAAAAMAAYAAAABAAYAAAAMAAcAAAABAAYAAAAMAAgAAAABAAYAAAAMAAkAAAABAAYAAAAMAAwAAAABAAYAAAAMAA0AAAABAAYAAAAMAA4AAAABAAYAAAAMAA8AAAABAAYAAAAAAAEAAAACAAYAAAAAAAAAAAACAAYAAAABAAAAAAACAAYAAAABAAEAAAACAAYAAAABAAIAAAACAAYAAAABAAMAAAACAAYAAAABAAQAAAACAAYAAAAAAAMAAAACAAYAAAAAAAIAAAACAAYAAAAAAAQAAAACAAYAAAABAAUAAAACAAYAAAABAAYAAAACAAYAAAABAAcAAAACAAYAAAABAAgAAAACAAYAAAABAAkAAAACAAYAAAABAAoAAAACAAYAAAABAAsAAAACAAYAAAABAAwAAAACAAYAAAABAA0AAAACAAYAAAABAA4AAAACAAYAAAAAAA4AAAACAAYAAAAAAA0AAAACAAYAAAAAAAwAAAACAAYAAAAAAAsAAAACAAYAAAAAAAoAAAACAAYAAAAAAAkAAAACAAYAAAAAAAgAAAACAAYAAAAAAAcAAAACAAYAAAAAAAYAAAACAAYAAAAAAAUAAAACAAYAAAANAAAAAAACAAYAAAAOAAAAAAACAAYAAAAPAAAAAAACAAYAAAAQAAAAAAACAAYAAAARAAAAAAACAAYAAAASAAAAAAACAAYAAAATAAAAAAACAAYAAAAUAAAAAAACAAYAAAAVAAAAAAACAAYAAAAWAAAAAAACAAYAAAAXAAAAAAACAAYAAAAYAAAAAAACAAYAAAAYAAEAAAACAAYAAAAZAAEAAAACAAYAAAAXAAEAAAACAAYAAAAWAAEAAAACAAYAAAAVAAEAAAACAAYAAAAUAAEAAAACAAYAAAATAAEAAAACAAYAAAASAAEAAAACAAYAAAARAAEAAAACAAYAAAAQAAEAAAACAAYAAAAPAAEAAAACAAYAAAAOAAEAAAACAAYAAAANAAEAAAACAAYAAAAZAAAAAAACAAYAAAAUAAIAAAACAAYAAAATAAIAAAACAAYAAAASAAIAAAACAAYAAAARAAIAAAACAAYAAAAQAAIAAAACAAYAAAAPAAIAAAACAAYAAAAOAAIAAAACAAYAAAANAAIAAAACAAYAAAATAAMAAAACAAYAAAASAAMAAAACAAYAAAARAAMAAAACAAYAAAAQAAMAAAACAAYAAAAPAAMAAAACAAYAAAAOAAMAAAACAAYAAAANAAMAAAACAAYAAAANAAQAAAACAAYAAAANAAUAAAACAAYAAAANAAYAAAACAAYAAAANAAcAAAACAAYAAAAOAAcAAAACAAYAAAAOAAgAAAACAAYAAAAPAAcAAAACAAYAAAAPAAYAAAACAAYAAAAQAAYAAAACAAYAAAAQAAUAAAACAAYAAAARAAUAAAACAAYAAAARAAQAAAACAAYAAAASAAQAAAACAAYAAAAQAAQAAAACAAYAAAAPAAQAAAACAAYAAAAOAAQAAAACAAYAAAAPAAUAAAACAAYAAAAOAAUAAAACAAYAAAAOAAYAAAACAAYAAAANAAgAAAACAAYAAAANAAkAAAACAAYAAAANAAoAAAACAAYAAAANAAsAAAACAAYAAAANAAwAAAACAAYAAAANAA0AAAACAAYAAAANAA4AAAACAAYAAAANAA8AAAACAAYAAAAOAAwAAAACAAYAAAAOAAsAAAACAAYAAAAOAAoAAAACAAYAAAAOAAkAAAACAAYAAAAPAAgAAAACAAYAAAAPAAkAAAACAAYAAAAOAA0AAAACAAYAAAAOAA4AAAACAAYAAAAOAA8AAAACAAYAAAAPAA4AAAACAAYAAAAPAA0AAAACAAYAAAAPAAwAAAACAAYAAAAPAAsAAAACAAYAAAAPAAoAAAACAAYAAAAQAAoAAAACAAYAAAAQAAkAAAACAAYAAAAQAAgAAAACAAYAAAAQAAcAAAACAAYAAAAQAAsAAAACAAYAAAAQAAwAAAACAAYAAAAQAA0AAAACAAYAAAAQAA4AAAACAAYAAAARAAoAAAACAAYAAAARAAkAAAACAAYAAAARAAgAAAACAAYAAAARAAcAAAACAAYAAAARAAYAAAACAAYAAAASAAUAAAACAAYAAAASAAYAAAACAAYAAAASAAcAAAACAAYAAAASAAgAAAACAAYAAAATAAgAAAACAAYAAAATAAcAAAACAAYAAAATAAYAAAACAAYAAAAUAAUAAAACAAYAAAAUAAQAAAACAAYAAAAUAAMAAAACAAYAAAAUAAYAAAACAAYAAAADAAQAAAAMAAYAAAAEAAQAAAANAAYAAAAFAAQAAAANAAYAAAAGAAQAAAAOAAYAAAALAAkAAAAOAAYAAAAKAAkAAAANAAYAAAAJAAkAAAANAAYAAAAIAAkAAAANAAYAAAAHAAkAAAANAAYAAAAGAAkAAAAMAAYAAAADAAwAAAANAAYAAAAEAAwAAAAOAAYAAAALAA4AAAAOAAYAAAAKAA4AAAANAAYAAAAJAA4AAAANAAYAAAAIAA4AAAANAAYAAAAHAA4AAAANAAYAAAAGAA4AAAAMAAYAAAA=")
+tile_set = ExtResource("3_fgtvi")
+
+[node name="Player" parent="." unique_id=2098904787 instance=ExtResource("1_hhinq")]
+z_index = 10
+position = Vector2(116, 24)
+rotation = -3.1415927
+scale = Vector2(1, -1)
+script = ExtResource("2_fgtvi")
+fall_speed = 75.0
+fourtwo = "res://scenes/fourtwo.tscn"
+chuansong_y = 300.0
+
+[node name="Background" type="Node2D" parent="." unique_id=118889839]
+
+[node name="SkyColor" type="Polygon2D" parent="Background" unique_id=327619401]
+z_index = -30
+position = Vector2(-2, 0)
+color = Color(0.8509804, 0.9411765, 0.9372549, 1)
+polygon = PackedVector2Array(0, 0, 468, 0, 468, 130.0972, 468, 270, 0, 270)
+
+[node name="CloudBand_01" type="Sprite2D" parent="Background" unique_id=626539602]
+z_index = -20
+texture_filter = 1
+position = Vector2(12, 150)
+texture = ExtResource("4_wg10w")
+
+[node name="CloudBand_02" type="Sprite2D" parent="Background" unique_id=1567181006]
+z_index = -20
+texture_filter = 1
+position = Vector2(36, 150)
+texture = ExtResource("5_e0tbd")
+
+[node name="CloudBand_03" type="Sprite2D" parent="Background" unique_id=1284601162]
+z_index = -20
+texture_filter = 1
+position = Vector2(60, 150)
+texture = ExtResource("6_s4v41")
+
+[node name="CloudBand_04" type="Sprite2D" parent="Background" unique_id=537587469]
+z_index = -20
+texture_filter = 1
+position = Vector2(84, 150)
+texture = ExtResource("7_dt7qr")
+
+[node name="CloudBand_05" type="Sprite2D" parent="Background" unique_id=685817705]
+z_index = -20
+texture_filter = 1
+position = Vector2(108, 150)
+texture = ExtResource("4_wg10w")
+
+[node name="CloudBand_06" type="Sprite2D" parent="Background" unique_id=1616476707]
+z_index = -20
+texture_filter = 1
+position = Vector2(132, 150)
+texture = ExtResource("5_e0tbd")
+
+[node name="CloudBand_07" type="Sprite2D" parent="Background" unique_id=978513334]
+z_index = -20
+texture_filter = 1
+position = Vector2(156, 150)
+texture = ExtResource("6_s4v41")
+
+[node name="CloudBand_08" type="Sprite2D" parent="Background" unique_id=1852989848]
+z_index = -20
+texture_filter = 1
+position = Vector2(180, 150)
+texture = ExtResource("7_dt7qr")
+
+[node name="CloudBand_09" type="Sprite2D" parent="Background" unique_id=1499124082]
+z_index = -20
+texture_filter = 1
+position = Vector2(204, 150)
+texture = ExtResource("4_wg10w")
+
+[node name="CloudBand_10" type="Sprite2D" parent="Background" unique_id=1130647437]
+z_index = -20
+texture_filter = 1
+position = Vector2(228, 150)
+texture = ExtResource("5_e0tbd")
+
+[node name="CloudBand_11" type="Sprite2D" parent="Background" unique_id=641252392]
+z_index = -20
+texture_filter = 1
+position = Vector2(252, 150)
+texture = ExtResource("6_s4v41")
+
+[node name="CloudBand_12" type="Sprite2D" parent="Background" unique_id=2030040369]
+z_index = -20
+texture_filter = 1
+position = Vector2(276, 150)
+texture = ExtResource("7_dt7qr")
+
+[node name="CloudBand_13" type="Sprite2D" parent="Background" unique_id=1019440697]
+z_index = -20
+texture_filter = 1
+position = Vector2(300, 150)
+texture = ExtResource("4_wg10w")
+
+[node name="CloudBand_14" type="Sprite2D" parent="Background" unique_id=1339768721]
+z_index = -20
+texture_filter = 1
+position = Vector2(324, 150)
+texture = ExtResource("5_e0tbd")
+
+[node name="CloudBand_15" type="Sprite2D" parent="Background" unique_id=57458775]
+z_index = -20
+texture_filter = 1
+position = Vector2(348, 150)
+texture = ExtResource("6_s4v41")
+
+[node name="CloudBand_16" type="Sprite2D" parent="Background" unique_id=2011204840]
+z_index = -20
+texture_filter = 1
+position = Vector2(372, 150)
+texture = ExtResource("7_dt7qr")
+
+[node name="CloudBand_17" type="Sprite2D" parent="Background" unique_id=1244767672]
+z_index = -20
+texture_filter = 1
+position = Vector2(396, 150)
+texture = ExtResource("4_wg10w")
+
+[node name="CloudBand_18" type="Sprite2D" parent="Background" unique_id=331026181]
+z_index = -20
+texture_filter = 1
+position = Vector2(420, 150)
+texture = ExtResource("5_e0tbd")
+
+[node name="CloudBand_19" type="Sprite2D" parent="Background" unique_id=1557814703]
+z_index = -20
+texture_filter = 1
+position = Vector2(444, 150)
+texture = ExtResource("6_s4v41")
+
+[node name="CloudBand_20" type="Sprite2D" parent="Background" unique_id=1456936185]
+z_index = -20
+texture_filter = 1
+position = Vector2(468, 150)
+texture = ExtResource("7_dt7qr")
+
+[node name="Hazards" type="Node2D" parent="." unique_id=2064836988]
+
+[node name="Spikes_01" parent="Hazards" unique_id=691928294 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(165, 154.99998)
+rotation = 0.008014216
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_01" unique_id=1131833505]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_02" parent="Hazards" unique_id=234129425 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(182, 155)
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_02" unique_id=1581343254]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_i456w")
+
+[node name="Spikes_03" parent="Hazards" unique_id=2060763183 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(146.00002, 156.00002)
+rotation = 0.0080862045
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_03" unique_id=1738044416]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_04" parent="Hazards" unique_id=338471700 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(127, 156)
+rotation = 0.048389316
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_04" unique_id=1822001884]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_05" parent="Hazards" unique_id=1027005175 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(65.00001, 67)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_05" unique_id=1706189579]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_06" parent="Hazards" unique_id=1239156304 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(114.00001, 67)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_06" unique_id=683337321]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_07" parent="Hazards" unique_id=1960445933 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(97.00001, 67)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_07" unique_id=71658209]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_08" parent="Hazards" unique_id=694124895 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(63, 211)
+rotation = 0.008014216
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_08" unique_id=1565720767]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_09" parent="Hazards" unique_id=344808497 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(79, 211.00002)
+rotation = 0.008014216
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_09" unique_id=1248306708]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_10" parent="Hazards" unique_id=639959625 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(159, 244)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_10" unique_id=1181236919]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_11" parent="Hazards" unique_id=1596978252 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(208, 244)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_11" unique_id=1916157050]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_12" parent="Hazards" unique_id=459476353 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(191, 244)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_12" unique_id=903651957]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_13" parent="Hazards" unique_id=1579178023 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(174.99998, 244)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_13" unique_id=299370453]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_15" parent="Hazards" unique_id=1469631066 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(162, 244)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_15" unique_id=1595724811]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_16" parent="Hazards" unique_id=615521287 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(145, 244)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_16" unique_id=1440842162]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_17" parent="Hazards" unique_id=765912515 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(128.99998, 244)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hazards/Spikes_17" unique_id=817405022]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[node name="Spikes_01" parent="." unique_id=309627059 instance=ExtResource("8_s4v41")]
+z_index = 5
+position = Vector2(80.99999, 67)
+rotation = -0.018686287
+script = ExtResource("9_dt7qr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes_01" unique_id=157236597]
+position = Vector2(1, 5)
+shape = SubResource("RectangleShape2D_44xxe")
+
+[connection signal="body_entered" from="Hazards/Spikes_01" to="Hazards/Spikes_01" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_02" to="Hazards/Spikes_02" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_03" to="Hazards/Spikes_03" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_04" to="Hazards/Spikes_04" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_05" to="Hazards/Spikes_05" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_06" to="Hazards/Spikes_06" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_07" to="Hazards/Spikes_07" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_08" to="Hazards/Spikes_08" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_09" to="Hazards/Spikes_09" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_10" to="Hazards/Spikes_10" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_11" to="Hazards/Spikes_11" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_12" to="Hazards/Spikes_12" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_13" to="Hazards/Spikes_13" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_15" to="Hazards/Spikes_15" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_16" to="Hazards/Spikes_16" method="_on_body_entered"]
+[connection signal="body_entered" from="Hazards/Spikes_17" to="Hazards/Spikes_17" method="_on_body_entered"]
+[connection signal="body_entered" from="Spikes_01" to="Spikes_01" method="_on_body_entered"]

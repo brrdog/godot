@@ -1,0 +1,20 @@
+[gd_scene format=4 uid="uid://ba3kxgme0p7td"]
+
+[ext_resource type="PackedScene" uid="uid://c1u8k6ny02t4y" path="res://scenes/player.tscn" id="1_sfn2i"]
+[ext_resource type="Script" uid="uid://cl8j8cbt36m2o" path="res://scenes/playerlowg.gd" id="2_fxhcp"]
+[ext_resource type="TileSet" uid="uid://dkowcf1ljh41j" path="res://assets/game/tilesets/kenney_terrain_tileset.tres" id="3_fxhcp"]
+
+[node name="Node2D" type="Node2D" unique_id=288791389]
+
+[node name="Player" parent="." unique_id=2098904787 instance=ExtResource("1_sfn2i")]
+z_index = 10
+position = Vector2(116, 24)
+rotation = -3.1415927
+scale = Vector2(1, -1)
+script = ExtResource("2_fxhcp")
+new_y = 300.0
+four2 = "res://scenes/four2.tscn"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1036385395]
+tile_map_data = PackedByteArray("AAAGAAcAAAAPAAgAAAAGAAgAAAAPAAgAAAAFAAgAAAAPAAgAAAAFAAkAAAAPAAgAAAAFAAoAAAAPAAgAAAAEAAoAAAAPAAgAAAAEAAsAAAAPAAgAAAADAAsAAAAPAAgAAAADAAoAAAAPAAgAAAADAAkAAAAPAAgAAAADAAgAAAAPAAgAAAAEAAcAAAAPAAgAAAAFAAcAAAAPAAgAAAAGAAYAAAAPAAgAAAAHAAYAAAAPAAgAAAAIAAYAAAAPAAgAAAAJAAYAAAAPAAgAAAAKAAYAAAAPAAgAAAALAAcAAAAPAAgAAAAMAAcAAAAPAAgAAAANAAcAAAAPAAgAAAAOAAgAAAAPAAgAAAAPAAkAAAAPAAgAAAAPAAoAAAAPAAgAAAAOAAoAAAAPAAgAAAAOAAsAAAAPAAgAAAANAAsAAAAPAAgAAAANAAwAAAAPAAgAAAAMAAwAAAAPAAgAAAALAAwAAAAPAAgAAAAKAAwAAAAPAAgAAAAJAAwAAAAPAAgAAAAIAAsAAAAPAAgAAAAHAAsAAAAPAAgAAAAGAAsAAAAPAAgAAAAEAAkAAAAPAAgAAAAEAAgAAAAPAAgAAAAFAAYAAAAPAAgAAAAGAAUAAAAPAAgAAAAHAAUAAAAPAAgAAAAIAAUAAAAPAAgAAAAHAAcAAAAPAAgAAAA=")
+tile_set = ExtResource("3_fxhcp")

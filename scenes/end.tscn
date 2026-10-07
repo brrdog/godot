@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://dltlne2ja2t4l"]
+
+[ext_resource type="Script" uid="uid://docpopdc4rr0x" path="res://scenes/button_2.gd" id="1_mwn6m"]
+[ext_resource type="Texture2D" uid="uid://cib5x5ca8p8ti" path="res://scenes/维什戴尔-绝对主角-正面-Idle-f37.png" id="2_3d26k"]
+
+[node name="Control" type="Control" unique_id=1683026071]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=919479979]
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 263.0
+color = Color(0.9967386, 0.5719355, 0.7006598, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1047492223]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 20.0
+offset_right = 436.0
+offset_bottom = 43.0
+text = "维维美小冒险 堂堂结束"
+
+[node name="Button2" type="Button" parent="." unique_id=818859070]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 163.0
+offset_right = 189.0
+offset_bottom = 203.0
+rotation = 0.7761647
+text = "润"
+script = ExtResource("1_mwn6m")
+
+[node name="Button3" type="Button" parent="." unique_id=2111553209]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 213.0
+offset_right = 370.0
+offset_bottom = 263.0
+rotation = -0.29720291
+text = "润"
+script = ExtResource("1_mwn6m")
+
+[node name="Button4" type="Button" parent="." unique_id=42282586]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 69.0
+offset_right = 255.0
+offset_bottom = 100.0
+rotation = -0.19745748
+text = "润"
+script = ExtResource("1_mwn6m")
+
+[node name="Button5" type="Button" parent="." unique_id=168920956]
+layout_mode = 0
+offset_left = -26.0
+offset_top = 114.0
+offset_right = 162.0
+offset_bottom = 154.0
+text = "润"
+script = ExtResource("1_mwn6m")
+
+[node name="Button6" type="Button" parent="." unique_id=1736111653]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 163.0
+offset_right = 491.0
+offset_bottom = 203.0
+rotation = 0.6547149
+text = "润"
+script = ExtResource("1_mwn6m")
+
+[node name="Button7" type="Button" parent="." unique_id=1022191426]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 105.0
+offset_right = 434.0
+offset_bottom = 145.0
+rotation = -0.030541657
+text = "润"
+script = ExtResource("1_mwn6m")
+
+[node name="Button8" type="Button" parent="." unique_id=840383827]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 11.0
+offset_right = 439.0
+offset_bottom = 51.0
+rotation = 1.996061
+text = "润"
+script = ExtResource("1_mwn6m")
+
+[node name="维什戴尔绝对主角正面IdleF37" type="Sprite2D" parent="." unique_id=2042284391]
+position = Vector2(281.59003, 32.983303)
+rotation = -0.036085304
+scale = Vector2(0.18020317, 0.14144644)
+texture = ExtResource("2_3d26k")
+
+[node name="维什戴尔绝对主角正面IdleF38" type="Sprite2D" parent="." unique_id=1875533622]
+position = Vector2(281.59003, 32.983303)
+rotation = -0.036085304
+scale = Vector2(0.18020317, 0.14144644)
+texture = ExtResource("2_3d26k")
+
+[node name="维什戴尔绝对主角正面IdleF39" type="Sprite2D" parent="." unique_id=735545497]
+position = Vector2(246, 153)
+rotation = -0.29026717
+scale = Vector2(0.18020317, 0.14144644)
+texture = ExtResource("2_3d26k")
+
+[node name="维什戴尔绝对主角正面IdleF40" type="Sprite2D" parent="." unique_id=224003902]
+position = Vector2(43.99997, 77)
+rotation = -0.036085304
+scale = Vector2(0.18020317, 0.14144644)
+texture = ExtResource("2_3d26k")
+
+[node name="维什戴尔绝对主角正面IdleF41" type="Sprite2D" parent="." unique_id=919889516]
+position = Vector2(403, 70)
+rotation = -0.036085304
+scale = Vector2(0.18020317, 0.14144644)
+texture = ExtResource("2_3d26k")
+
+[node name="维什戴尔绝对主角正面IdleF42" type="Sprite2D" parent="." unique_id=314620357]
+position = Vector2(91.186646, 177.98335)
+rotation = 0.59657514
+scale = Vector2(0.22517805, 0.16711435)
+texture = ExtResource("2_3d26k")
+
+[connection signal="button_down" from="Button2" to="Button2" method="_on_button_down"]
+[connection signal="button_down" from="Button3" to="Button3" method="_on_button_down"]
+[connection signal="button_down" from="Button4" to="Button4" method="_on_button_down"]
+[connection signal="button_down" from="Button5" to="Button5" method="_on_button_down"]
+[connection signal="button_down" from="Button6" to="Button6" method="_on_button_down"]
+[connection signal="button_down" from="Button7" to="Button7" method="_on_button_down"]
+[connection signal="button_down" from="Button8" to="Button8" method="_on_button_down"]
