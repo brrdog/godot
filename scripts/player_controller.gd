@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var acceleration: float = 600.0
 @export var deceleration: float = 800.0
 @export var jump_velocity: float = -190.0
+var on_ladder: bool = false
 
 
 @onready var sprite: Sprite2D = $Sprite2D
@@ -14,16 +15,19 @@ var flying : bool = false
 var last_space_press_time := -1000
 
 func _physics_process(delta: float) -> void:
-
-	if !flying:
+	if on_ladder:
+			handle_ladder_movement(delta)
+	elif !flying:
 		apply_gravity(delta)
 		handle_jump()
+	
 	else:
 		handle_vertical_movement(delta)
 	
 	handle_horizontal_movement(delta)
 	update_sprite_direction()
 	move_and_slide()
+	
 
 func apply_gravity(delta: float) -> void:
 	if not is_on_floor():
@@ -87,3 +91,9 @@ func handle_space_pressed() -> void:
 
 func _on_spikes_01_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
 	pass # Replace with function body.
+func handle_ladder_movement(delta: float) -> void:
+	var input_y := Input.get_axis("jump", "squat")
+	velocity.y = input_y * move_speed
+	var input_x := Input.get_axis("move_left", "move_right")
+	velocity.x = move_toward(velocity.x, input_x * move_speed, acceleration * delta)
+	
